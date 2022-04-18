@@ -2,3 +2,4 @@
 (AI-based sign language recognition web service)  
 
 프로젝트의 목적 : 진료 기관에서 농인 환자와 의료진 간의 의사소통 문제 해결
+프로젝트 : 수어->음성 음성->텍스트
