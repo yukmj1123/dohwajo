@@ -38,3 +38,22 @@ def Random_Brightness_Augmentation(data):
         plt.imshow(image)
 
     plt.show()
+
+
+# Horizontal_And_Vertical_Flip : 위, 아래, 왼쪽, 오른쪽으로 뒤집기
+def Horizontal_And_Vertical_Flip(data):
+    samples = expand_dims(data,0)
+    datagen = ImageDataGenerator(horizontal_flip=True,
+                                 vertical_flip=True)
+
+    it = datagen.flow(samples, batch_size=1)
+
+    fig = plt.figure(figsize=(30,30))
+
+    for i in range(9):
+        plt.subplot(3, 3, i+1)
+        batch = it.next()
+        image = batch[0].astype('uint8')
+        plt.imshow(image)
+
+    plt.show()
