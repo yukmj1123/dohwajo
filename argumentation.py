@@ -75,3 +75,19 @@ def Random_Rotation(data):
 
     plt.show()
 
+# Random_Zoom : 랜덤으로 줌
+def Random_Zoom(data):
+    samples = expand_dims(data,0)
+    datagen = ImageDataGenerator(zoom_range=[0.5,1.0])
+
+    it = datagen.flow(samples, batch_size=1)
+
+    fig = plt.figure(figsize=(30,30))
+
+    for i in range(9):
+        plt.subplot(3, 3, i+1)
+        batch = it.next()
+        image = batch[0].astype('uint8')
+        plt.imshow(image)
+
+    plt.show()
