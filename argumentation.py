@@ -91,3 +91,26 @@ def Random_Zoom(data):
         plt.imshow(image)
 
     plt.show()
+
+# Random_Argumentation : 데이터 랜덤 증강
+def Random_Argumentation(data):
+    samples = expand_dims(data,0)
+    datagen = ImageDataGenerator(
+                                zoom_range=[0.5,1.0],
+                                brightness_range=[0.2,1.0],
+                                rotation_range=90,
+                                horizontal_flip=True,
+                                vertical_flip=True,
+                                width_shift_range=0.5)
+
+    it = datagen.flow(samples, batch_size=1)
+
+    fig = plt.figure(figsize=(30,30))
+
+    for i in range(32):
+        plt.subplot(8, 4, i+1)
+        batch = it.next()
+        image = batch[0].astype('uint8')
+        plt.imshow(image)
+
+    plt.show()
