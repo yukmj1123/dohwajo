@@ -20,3 +20,21 @@ def Width_Shift_Range(data):
         plt.imshow(image)
 
     plt.show()
+
+
+# Random_Brightness_Augmentation : 이미지 밝기 랜덤
+def Random_Brightness_Augmentation(data):
+    samples = expand_dims(data,0)
+    datagen = ImageDataGenerator(brightness_range=[0.2,1.0])
+
+    it = datagen.flow(samples, batch_size=1)
+
+    fig = plt.figure(figsize=(20,20))
+
+    for i in range(9):
+        plt.subplot(3, 3, i+1)
+        batch = it.next()
+        image = batch[0].astype('uint8')
+        plt.imshow(image)
+
+    plt.show()
