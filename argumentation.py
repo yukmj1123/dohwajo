@@ -57,3 +57,21 @@ def Horizontal_And_Vertical_Flip(data):
         plt.imshow(image)
 
     plt.show()
+
+# Random_Rotation : 랜덤으로 회전
+def Random_Rotation(data):
+    samples = expand_dims(data,0)
+    datagen = ImageDataGenerator(rotation_range=90)
+
+    it = datagen.flow(samples, batch_size=1)
+
+    fig = plt.figure(figsize=(30,30))
+
+    for i in range(9):
+        plt.subplot(3, 3, i+1)
+        batch = it.next()
+        image = batch[0].astype('uint8')
+        plt.imshow(image)
+
+    plt.show()
+
