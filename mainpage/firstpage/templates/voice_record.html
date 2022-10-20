@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음성 인식</title>
+    <style>
+        .voicerecord{
+            margin-top:10%;
+            margin-left:30%;
+            width:500px;
+            height:300px;
+            border:3px solid black;
+            float:left;
+            font-size:3ch;
+        }
+
+        .inputbutton{
+            float:top;
+            margin-left:30%;
+            width:200px;
+            height:50px;
+            font-size:3ch;
+        }
+
+        .tofirst{
+            float:top;
+            margin-left:5px;
+            width:200px;
+            height:50px;
+            font-size:3ch;
+        }
+    </style>
+</head>
+<body>
+    <div class = "voicerecord">{{recvoice}}</div>
+    <button class = "inputbutton" onclick = "location.href = '/recandprint'">음성 입력</button>
+    <button class = "tofirst" onclick = "location.href = '/video_first'">처음으로</button>
+</body>
+</html>
