@@ -1,0 +1,36 @@
+.print_result{
+    margin-top:10%;
+    margin-left:30%;
+    width:500px;
+    height:300px;
+    border:3px solid black;
+    float:left;
+    text-align:center;
+    font-size:3ch;
+}
+
+.voicerecord{
+    margin-top:10%;
+    margin-left:30%;
+    width:500px;
+    height:300px;
+    border:3px solid black;
+    float:left;
+    font-size:3ch;
+}
+
+.inputbutton{
+    float:top;
+    margin-left:30%;
+    width:200px;
+    height:50px;
+    font-size:3ch;
+}
+
+.tofirst{
+    float:top;
+    margin-left:5px;
+    width:200px;
+    height:50px;
+    font-size:3ch;
+}
