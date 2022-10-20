@@ -19,7 +19,7 @@ import firstpage.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', voicerec.views.video_first, name='video_first'),
+    path('', firstpage.views.video_first, name='video_first'),
     path('video_first/', firstpage.views.video_first, name = 'video_first'),
     path('video_second/', firstpage.views.video_second, name = 'video_second'),
     path('print_result/', firstpage.views.print_result, name = 'print_result'),
