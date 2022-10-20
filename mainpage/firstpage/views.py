@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .transcribe_streaming_mic import recvoice
+from .gvoicerec import recvoice
 from django.http import StreamingHttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators import gzip
