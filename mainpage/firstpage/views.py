@@ -13,7 +13,7 @@ import os
 
 def speak(text):
     tts = gTTS(text = text, lang = 'ko')
-    filename = 'C:/Users/rnvld/myenv/Scripts/siteprac/voice.mp3'
+    filename = 'C:/dohwajo/mainpage/voice.mp3'
     tts.save(filename)
     playsound.playsound(filename)
     if os.path.exists(filename):
@@ -35,10 +35,10 @@ def mediavideo(page):
 
     if page == '1page':
         actions = ['head', 'chest', 'stomach']
-        model = load_model('C:/Users/rnvld/myenv/Scripts/siteprac/voicerec/model1.h5')
+        model = load_model('C:/dohwajo/mainpage/firstpage/model1.h5')
     else:
         actions = ['sick', 'stuffy', 'strange']
-        model = load_model('C:/Users/rnvld/myenv/Scripts/siteprac/voicerec/model2.h5')
+        model = load_model('C:/dohwajo/mainpage/firstpage/model2.h5')
     
     #actions = ['sick', 'stuffy', 'strange']
     seq_length = 30
