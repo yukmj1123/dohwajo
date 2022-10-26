@@ -7,8 +7,8 @@
     <title>음성 인식</title>
     <style>
         .voicerecord{
-            margin-top:10%;
-            margin-left:30%;
+            margin-top:5%;
+            margin-left:33%;
             width:500px;
             height:300px;
             border:3px solid black;
@@ -18,7 +18,7 @@
 
         .inputbutton{
             float:top;
-            margin-left:30%;
+            margin-left:33%;
             width:200px;
             height:50px;
             font-size:3ch;
@@ -31,9 +31,13 @@
             height:50px;
             font-size:3ch;
         }
+
+        h1{text-align: center;}
     </style>
 </head>
 <body>
+    <br></br>
+    <h1>진단 결과를 말해드릴게요</h1>
     <div class = "voicerecord">{{recvoice}}</div>
     <button class = "inputbutton" onclick = "location.href = '/recandprint'">음성 입력</button>
     <button class = "tofirst" onclick = "location.href = '/video_first'">처음으로</button>

@@ -35,10 +35,10 @@ def mediavideo(page):
 
     if page == '1page':
         actions = ['head', 'chest', 'stomach']
-        model = load_model('C:/dohwajo/mainpage/firstpage/model1.h5')
+        model = load_model('C:/dohwajo/mainpage/firstpage/model5.h5')
     else:
         actions = ['sick', 'stuffy', 'strange']
-        model = load_model('C:/dohwajo/mainpage/firstpage/model2.h5')
+        model = load_model('C:/dohwajo/mainpage/firstpage/model4.h5')
     
     #actions = ['sick', 'stuffy', 'strange']
     seq_length = 30
