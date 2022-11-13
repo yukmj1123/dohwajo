@@ -125,8 +125,6 @@ def listen_print_loop(responses):
     the next result to overwrite it, until the response is a final one. For the
     final one, print a newline to preserve the finalized transcription.
     """
-    restrans = ''
-    time_end = time.time() + 3
     num_chars_printed = 0
     for response in responses:
         if not response.results:
@@ -165,14 +163,8 @@ def listen_print_loop(responses):
                 break
 
             num_chars_printed = 0
+            return transcript + overwrite_chars
         
-        restrans = transcript + overwrite_chars
-        
-        if time.time() > time_end:
-            break
-    
-    return restrans
-
 def recvoice():
     # See http://g.co/cloud/speech/docs/languages
     # for a list of supported languages.
